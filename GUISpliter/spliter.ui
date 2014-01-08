@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Spliter</class>
+ <widget class="QMainWindow" name="Spliter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>589</width>
+    <height>467</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Spliter</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="PlayBackWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>390</y>
+      <width>591</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="Player_Play">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="uirc.qrc">
+       <normaloff>:/PlayBackIcons/media-playback-start.png</normaloff>:/PlayBackIcons/media-playback-start.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>24</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Player_Stop">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>0</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="uirc.qrc">
+       <normaloff>:/PlayBackIcons/media-playback-stop.png</normaloff>:/PlayBackIcons/media-playback-stop.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>24</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>6</y>
+       <width>55</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>指针位置:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>5</y>
+       <width>71</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>分割点数量:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="SplitPointCount">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>5</y>
+       <width>31</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="PointerDisplay">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>2</y>
+       <width>113</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="TimeStartDisplay">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>2</y>
+       <width>113</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="TimeEndDisplay">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>24</y>
+       <width>113</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>6</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>开始:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>28</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>结束:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="SplitPointActived">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>25</y>
+       <width>201</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string> -- </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>25</y>
+       <width>71</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>当前选择:</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>589</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_F">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="action_SCONF_O"/>
+    <addaction name="action_WAVE"/>
+    <addaction name="separator"/>
+    <addaction name="action_SCONF"/>
+    <addaction name="action_SCONF_2"/>
+    <addaction name="separator"/>
+    <addaction name="action_X"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>编辑(&amp;E)</string>
+    </property>
+    <addaction name="action_5"/>
+    <addaction name="action_6"/>
+    <addaction name="action"/>
+    <addaction name="separator"/>
+    <addaction name="action_12"/>
+    <addaction name="separator"/>
+    <addaction name="action_11"/>
+   </widget>
+   <addaction name="menu_F"/>
+   <addaction name="menu_E"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="action_SCONF_O">
+   <property name="text">
+    <string>打开SCONF(&amp;O)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_WAVE">
+   <property name="text">
+    <string>打开WAVE</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+O</string>
+   </property>
+  </action>
+  <action name="action_SCONF">
+   <property name="text">
+    <string>保存SCONF(&amp;S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_SCONF_2">
+   <property name="text">
+    <string>另存为SCONF(&amp;A)</string>
+   </property>
+  </action>
+  <action name="action_X">
+   <property name="text">
+    <string>退出(&amp;X)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>添加分割点</string>
+   </property>
+   <property name="shortcut">
+    <string>A</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>删除分割点</string>
+   </property>
+   <property name="shortcut">
+    <string>D</string>
+   </property>
+  </action>
+  <action name="action_11">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>指针随播放移动</string>
+   </property>
+  </action>
+  <action name="action_12">
+   <property name="text">
+    <string>播放/暂停</string>
+   </property>
+   <property name="shortcut">
+    <string>Space</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>排序分割点缓冲区</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="uirc.qrc"/>
+ </resources>
+ <connections/>
+</ui>
