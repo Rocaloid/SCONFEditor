@@ -13,10 +13,10 @@ SPEditDialog::SPEditDialog(SconfProcessor *SClass, int SNum, QWidget *parent,boo
     {
         this->ui->SplitPointC->setText(QString(this->SCONFClass->ReadCByCount(this->SPNumber)));
         this->ui->SplitPointV->setText(QString(this->SCONFClass->ReadVByCount(this->SPNumber)));
-        this->setWindowTitle(QString("分割点 ")+QString::number(this->SPNumber)+QString(" @ ")+this->ui->SplitPointTime->text());
+        this->setWindowTitle(QString::fromUtf8("分割点 ")+QString::number(this->SPNumber)+QString(" @ ")+this->ui->SplitPointTime->text());
     }
     else
-        this->setWindowTitle(QString("新建分割点 ")+QString::number(this->SPNumber)+QString(" @ ")+this->ui->SplitPointTime->text());
+        this->setWindowTitle(QString::fromUtf8("新建分割点 ")+QString::number(this->SPNumber)+QString(" @ ")+this->ui->SplitPointTime->text());
 }
 
 SPEditDialog::~SPEditDialog()
