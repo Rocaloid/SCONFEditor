@@ -5,8 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui
-QMAKE_CXXFLAGS_RELEASE+=-std=gnu++11 -march=native -pipe -Ofast -ftree-vectorize
-QMAKE_CFLAGS_RELEASE+=-std=gnu99 -march=native -pipe -Ofast -ftree-vectorize
+QMAKE_CXXFLAGS_RELEASE+=-march=native -pipe -Ofast -ftree-vectorize
+QMAKE_CFLAGS_RELEASE+=-march=native -pipe -Ofast -ftree-vectorize
 QMAKE_LFLAGS_RELEASE+=-Wl,-O1,--as-needed,--sort-common
 QMAKE_CFLAGS_DEBUG+=-O1
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
