@@ -85,7 +85,7 @@ void Spliter::resizeEvent(QResizeEvent *)
 
 void Spliter::on_action_SCONF_O_triggered()
 {
-    QString QSCONFPatht = QFileDialog::getOpenFileName(this,tr("打开SCONF"), QDir::currentPath(), tr(QString::fromUtf8("分割配置文件(*.sconf)(*.sconf)")));
+    QString QSCONFPatht = QFileDialog::getOpenFileName(this,tr("打开SCONF"), QDir::currentPath(), QString::fromUtf8("分割配置文件(*.sconf)(*.sconf)"));
     if(QString::compare(QSCONFPatht,QString("")))
     {
         this->SCONFPath=QSPCA::toChar(QSCONFPatht);
@@ -96,7 +96,7 @@ void Spliter::on_action_SCONF_O_triggered()
 
 void Spliter::on_action_WAVE_triggered()
 {
-    QString QWavePatht = QFileDialog::getOpenFileName(this,tr("打开WAVE"), QDir::currentPath(), tr(QString::fromUtf8("波形文件(*.wav)(*.wav)")));
+    QString QWavePatht = QFileDialog::getOpenFileName(this,tr("打开WAVE"), QDir::currentPath(), QString::fromUtf8("波形文件(*.wav)(*.wav)"));
     if(QString::compare(QWavePatht,QString("")))
         {
                 this->WAVEPath=QSPCA::toChar(QWavePatht);
@@ -109,7 +109,7 @@ void Spliter::on_action_SCONF_2_triggered()
 {
     if(this->SCONFLoaded)
     {
-        QString qpath = QFileDialog::getSaveFileName(this, tr("保存SCONF"), QDir::currentPath(), tr(QString::fromUtf8("分割配置文件(*.sconf)(*.sconf)")));
+        QString qpath = QFileDialog::getSaveFileName(this, tr("保存SCONF"), QDir::currentPath(), QString::fromUtf8("分割配置文件(*.sconf)(*.sconf)"));
         this->SCONFPath=QSPCA::toChar(qpath);
         this->SaveSCONF();
     }
